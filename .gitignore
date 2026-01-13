@@ -1,10 +1,19 @@
-# Terraform
-**/.terraform/*
+/ADDITIONAL-TOPICS
+FUTURE-TOPICS
+#.gitignore
+
+# macOS Files
+.DS_Store
+
+# Ignore .sh files
+#*.sh
+
+# Terraform Files and Folders
+.terraform
 *.tfstate
 *.tfstate.backup
-.crash.log
-.terraform.lock.hcl
+#.terraform.lock.hcl
+#*.tfvars
 
-# OS
-.DS_Store
-Thumbs.db
+# Ignore .pem files
+#*.pem

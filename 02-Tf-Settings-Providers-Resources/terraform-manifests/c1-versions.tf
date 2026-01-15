@@ -5,8 +5,13 @@ terraform {
   required_providers {
     aws = { # the name "aws" here should match the provider block label
         # argument =, block {}
-        source = "hashicorp/aws"
-        version = "3.34.0"
+        source = "hashicorp/aws" # primary location for downloading provider
+        version = "~> 3.0"
     }
   }
+}
+
+provider "aws" {
+  region = "us-east-1"
+  # profile = "default" # profile name here
 }

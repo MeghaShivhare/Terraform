@@ -3,7 +3,7 @@ resource "aws_security_group" "vpc-ssh" {
   name = "vpc-ssh"
   description = "VPC SSH"
  
-  ingress = {
+  ingress {
     description = "Allow 22 for SSH"
     from_port = 22
     to_port = 22
@@ -11,7 +11,7 @@ resource "aws_security_group" "vpc-ssh" {
     cidr_blocks = ["0.0.0.0/0"] #list item - []
   }
 
-  egress = {
+  egress {
     description = "Allow all ips and ports"
     from_port = 0
     to_port = 0

@@ -15,5 +15,5 @@ FUTURE-TOPICS
 .terraform.lock.hcl
 #*.tfvars
 
-# Ignore .pem files
-#*.pem
+#Ignore .ppk files
+*.ppk

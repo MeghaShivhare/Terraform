@@ -53,7 +53,7 @@ resource "aws_security_group" "vpc-Web" {
   }
   
   tags = {
-    Name = "vpc-ssh"
+    Name = "vpc-web"
   }
 
 }

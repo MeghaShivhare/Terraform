@@ -1,5 +1,5 @@
 #AZ
-data "aws_availability_zone" "my_az" {
+data "aws_availability_zones" "my_az" {
   filter {
     name = "opt-in-status"
     values = [ "opt-in-not-required" ]
@@ -18,7 +18,7 @@ resource "aws_instance" "myec2" {
   vpc_security_group_ids = [ aws_security_group.vpc-ssh.id, aws_security_group.vpc-Web.id ] #resource
 
   # create instance is all available zones
-  for_each = toset(data.aws_availability_zone.my_az.name)
+  for_each = toset(data.aws_availability_zones.my_az.names)
   availability_zone = each.key
 
   tags = {
